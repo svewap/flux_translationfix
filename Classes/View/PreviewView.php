@@ -129,6 +129,8 @@ class PreviewView extends OriginalPreviewView
             }
         }
 
+        $hideAddContentButton = false;
+
         return sprintf(
             $this->templates['gridColumn'],
             $column->getColspan(),
@@ -140,7 +142,7 @@ class PreviewView extends OriginalPreviewView
             $templateDataLanguageUid,
             $pageUid,
             $id,
-            $this->hasConnectedTranslationMode(PageLayoutView::$staticLanguageHasTranslationsCache,$templateDataLanguageUid) ? '' : $this->drawNewIcon($row, $column),
+            ($this->hasConnectedTranslationMode(PageLayoutView::$staticLanguageHasTranslationsCache,$templateDataLanguageUid) && $hideAddContentButton) ? '' : $this->drawNewIcon($row, $column),
             CompatibilityRegistry::get(static::class . '->drawPasteIcon') ? $this->drawPasteIcon($row, $column) : '',
             $this->drawPasteIcon($row, $column, true),
             $content

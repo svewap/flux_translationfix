@@ -9,14 +9,6 @@ class PageLayoutView extends \FluidTYPO3\Flux\View\PageLayoutView
     public static $staticLanguageHasTranslationsCache = [];
 
 
-    /**
-     * @return array
-     */
-    public function getLanguageHasTranslationsCache(): array
-    {
-        return $this->languageHasTranslationsCache;
-    }
-
 
     /**
      * @param array $contentElements
@@ -31,8 +23,6 @@ class PageLayoutView extends \FluidTYPO3\Flux\View\PageLayoutView
 
         self::$staticLanguageHasTranslationsCache = $this->languageHasTranslationsCache;
     }
-
-
 
 
 }
