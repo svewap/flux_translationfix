@@ -2,7 +2,8 @@
 
 ## what does it do?
 
-Primarily, it corrects the order of content items during translation process so that the relations are set correctly
+Primarily, it corrects the order of content items during translation process so that the relations are set correctly.
+Secondarily, it corrects the translation button so that the backend correctly recognizes the column within the nested object.
 
 ## Inital situation
 ![Initial situation](https://raw.githubusercontent.com/svewap/flux_translationfix/master/Resources/Public/Images/initial_situation.png)
